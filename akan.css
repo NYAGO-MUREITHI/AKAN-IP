@@ -1,6 +1,7 @@
-h1.jumbotron{
+.jumbotron{
    text-align: center;
+   background-color: black;
 }
 body{
-     background-image: url(background.jpg);
+     background-image: url(background.png);
 }
