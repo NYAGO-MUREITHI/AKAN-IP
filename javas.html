@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="javas.css">
     <meta charset="utf-8">
     <title>JavaSc</title>
+
   </head>
   <body>
 
@@ -29,7 +30,7 @@
           MALE<input type="radio" id="male">
           FEMALE <input type="radio" id="female"><br>
 
-          <button type="button" onclick="myFunction()"id="clear">SUBMIT</button><br>
+          <button type="button" onclick="myFunction()">SUBMIT</button><br>
         </form>
 
       </div>
@@ -100,10 +101,13 @@
          }else if (result<7.5 && gender==="female") {
            alert("AMA")
          }
+
+         //clears input fields after submission
          document.getElementById("century").value = ""
          document.getElementById("year").value = ""
          document.getElementById("month").value = ""
          document.getElementById("day").value = ""
+
          // breaks the ongoing while loop
          break;
 
