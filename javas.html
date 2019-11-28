@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaSc</title>
+  </head>
+  <body>
+    <h1>Enter your details below: </h1>
+    <h4>Enter the first two digits of your year of birth</h4><br>
+    <input type="number" id="century">
+    <h4>Enter the last two digits of your year of birth</h4><br>
+    <input type="number" id="year">
+    <h4>Enter your month of birth</h4><br>
+    <input type="number" id="month">
+    <h4>Enter your day of birth</h4><br>
+    <input type="number" id="day"><br>
+    MALE<input type="radio" id="male">
+    FEMALE <input type="radio" id="female"><br>
+    <button type="button" onclick="myFunction()">SUBMIT</button><br>
+    <script type="text/javascript">
+      function myFunction(){
+         var y, x, a, t, gender;
+         y = parseInt(document.getElementById("century").value);
+         x = parseInt(document.getElementById("year").value);
+         a = parseInt(document.getElementById("month").value);
+         t = parseInt(document.getElementById("day").value);
+         if(a<=0 || a>12){
+           alert("PLEASE ENTER VALID MONTH");
+         }
+         if(t<1 || t>31){
+           alert("PLEASE ENTER VALID DATE")
+         }
+         while(a>0 && a<12 && t>1 && t<31){
+
+
+        //s = document.getElementById("male").checked=true;
+         //r = document.getElementById("female").checked=true;
+
+         if(document.getElementById("male").checked){
+           gender = "male";
+         }else if(document.getElementById("female").checked){
+           gender= "female"
+         }
+
+         var result=(( ( (y/4) -((2*y)-1)) + ((5*x)/4)  + (26*(a+1)/10) + t ) % 7);
+
+         alert(result)
+         if (result<1.5 && gender==="male") {
+           alert("KWASI")
+         }else if (result<2.5 && gender==="male") {
+           alert("KWADWO")
+         }else if (result<3.5 && gender==="male") {
+           alert("KWABENA")
+         }else if (result<4.5 && gender==="male") {
+           alert("KWAKU")
+         }else if (result<5.5 && gender==="male") {
+           alert("YAW")
+         }else if (result<6.5 && gender==="male") {
+           alert("KOFI")
+         }else if (result<7.5 && gender==="male") {
+           alert("KWAME")
+         }else if (result<1.5 && gender==="female")  {
+           alert("AKOSUA")
+         }else if (result<2.5 && gender==="female") {
+           alert("ADWOA")
+         }else if (result<3.5 && gender==="female") {
+           alert("ABENAA")
+         }else if (result<4.5 && gender==="female") {
+           alert("AKUA")
+         }else if (result<5.5 && gender==="female") {
+           alert("YAA")
+         }else if (result<6.5 && gender==="female") {
+           alert("AFUA")
+         }else if (result<7.5 && gender==="female") {
+           alert("AMA")
+         }
+       }
+      }
+
+
+
+
+
+
+
+    </script>
+
+
+  </body>
+</html>
