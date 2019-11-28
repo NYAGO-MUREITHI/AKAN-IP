@@ -1,6 +1,7 @@
 .jumbotron{
    text-align: center;
    background-color: gainsboro;
+   font-family: fantasy;
 }
 body{
      background-image: url(background.png);
