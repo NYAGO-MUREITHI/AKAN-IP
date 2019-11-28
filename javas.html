@@ -29,7 +29,7 @@
           MALE<input type="radio" id="male">
           FEMALE <input type="radio" id="female"><br>
 
-          <button type="button" onclick="myFunction()">SUBMIT</button><br>
+          <button type="button" onclick="myFunction()"id="clear">SUBMIT</button><br>
         </form>
 
       </div>
@@ -66,7 +66,7 @@
          }else if(document.getElementById("female").checked){
            gender= "female"
          }
-         
+
         // variable result gives the result of the calculations made
          var result=(( ( (y/4) -((2*y)-1)) + ((5*x)/4)  + (26*(a+1)/10) + t ) % 7);
 
@@ -100,6 +100,10 @@
          }else if (result<7.5 && gender==="female") {
            alert("AMA")
          }
+         document.getElementById("century").value = ""
+         document.getElementById("year").value = ""
+         document.getElementById("month").value = ""
+         document.getElementById("day").value = ""
          // breaks the ongoing while loop
          break;
 
