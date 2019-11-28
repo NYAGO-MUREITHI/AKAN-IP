@@ -7,24 +7,32 @@
     <title>JavaSc</title>
   </head>
   <body>
+
     <div class="card">
-    <div class="form">
-      <form id="class">
-    <h1>Enter your details below: </h1>
-    <h4>Enter the first two digits of your year of birth</h4><br>
-    <input type="number" id="century">
-    <h4>Enter the last two digits of your year of birth</h4><br>
-    <input type="number" id="year">
-    <h4>Enter your month of birth</h4><br>
-    <input type="number" id="month">
-    <h4>Enter your day of birth</h4><br>
-    <input type="number" id="day"><br>
-    MALE<input type="radio" id="male">
-    FEMALE <input type="radio" id="female"><br>
-    <button type="button" onclick="myFunction()">SUBMIT</button><br>
-  </form>
-  </div>
-</div>
+
+      <div class="form">
+        <form id="class">
+          <h1>Enter your details below: </h1>
+
+          <h4>Enter the first two digits of your year of birth</h4>
+          <input type="number" id="century"><br>
+
+          <h4>Enter the last two digits of your year of birth</h4>
+          <input type="number" id="year"><br>
+
+          <h4>Enter your month of birth</h4>
+          <input type="number" id="month"><br>
+
+          <h4>Enter your day of birth</h4>
+          <input type="number" id="day"><br>
+
+          MALE<input type="radio" id="male">
+          FEMALE <input type="radio" id="female"><br>
+
+          <button type="button" onclick="myFunction()">SUBMIT</button><br>
+        </form>
+      </div>
+    </div>
     <script type="text/javascript">
     //describing the function and variable
       function myFunction(){
@@ -85,11 +93,9 @@
          }else if (result<7.5 && gender==="female") {
            alert("AMA")
          }
+         // breaks the ongoing while loop
          break;
-         document.reset(y);
-         document.reset(x);
-         document.reset(a);
-         document.reset(t);
+
        }
       }
 
