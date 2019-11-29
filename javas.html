@@ -15,15 +15,15 @@
           <h1>Enter your details below: </h1>
 
           <h4>Enter your year of birth</h4>
-          <input type="number" id="century"><br>
+          <input type="number" id="century" placeholder="YEAR"><br>
 
 
 
           <h4>Enter your month of birth</h4>
-          <input type="number" id="month"><br>
+          <input type="number" id="month" placeholder="MONTH"><br>
 
           <h4>Enter your day of birth</h4>
-          <input type="number" id="day"><br>
+          <input type="number" id="day" placeholder="DATE"><br>
 
           MALE<input type="radio" id="male">
           FEMALE <input type="radio" id="female"><br>
@@ -40,11 +40,12 @@
     //describing the function and variable
       function myFunction(){
          var y, x, a, t, yy, gender;
-         yy = parseInt(document.getElementById("century").value)
-         y = parseInt(document.getElementById("century").value);
-         x = parseInt(document.getElementById("year").value);
+         yy = document.getElementById("century").value;
          a = parseInt(document.getElementById("month").value);
          t = parseInt(document.getElementById("day").value);
+
+         y = parseInt(yy.slice(0,2));
+         x = parseInt(yy.slice(2,4));
 
     //creates alert if invalid month and date are input
          if(a<=0 || a>12){
@@ -103,7 +104,6 @@
 
          //clears input fields after submission
          document.getElementById("century").value = ""
-         document.getElementById("year").value = ""
          document.getElementById("month").value = ""
          document.getElementById("day").value = ""
 
