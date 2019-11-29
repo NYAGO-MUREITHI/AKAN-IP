@@ -14,17 +14,16 @@
         <form id="class">
           <h1>Enter your details below: </h1>
 
-          <h4>Enter the first two digits of your year of birth</h4>
-          <input type="number" id="century"><br>
+          <h4>Enter your year of birth</h4>
+          <input type="number" id="century" placeholder="YEAR"><br>
 
-          <h4>Enter the last two digits of your year of birth</h4>
-          <input type="number" id="year"><br>
+
 
           <h4>Enter your month of birth</h4>
-          <input type="number" id="month"><br>
+          <input type="number" id="month" placeholder="MONTH"><br>
 
           <h4>Enter your day of birth</h4>
-          <input type="number" id="day"><br>
+          <input type="number" id="day" placeholder="DATE"><br>
 
           MALE<input type="radio" id="male">
           FEMALE <input type="radio" id="female"><br>
@@ -40,11 +39,13 @@
 
     //describing the function and variable
       function myFunction(){
-         var y, x, a, t, gender;
-         y = parseInt(document.getElementById("century").value);
-         x = parseInt(document.getElementById("year").value);
+         var y, x, a, t, yy, gender;
+         yy = document.getElementById("century").value;
          a = parseInt(document.getElementById("month").value);
          t = parseInt(document.getElementById("day").value);
+
+         y = parseInt(yy.slice(0,2));
+         x = parseInt(yy.slice(2,4));
 
     //creates alert if invalid month and date are input
          if(a<=0 || a>12){
@@ -65,7 +66,7 @@
            gender = "male";
          }else if(document.getElementById("female").checked){
            gender= "female"
-         }
+         }else(alert("PLEASE PICK GENDER"))
 
         // variable result gives the result of the calculations made
          var result=(( ( (y/4) -((2*y)-1)) + ((5*x)/4)  + (26*(a+1)/10) + t ) % 7);
@@ -100,10 +101,12 @@
          }else if (result<3.1 && gender==="female") {
            alert("ETE-SEN AMA")
          }
+
+         //clears input fields after submission
          document.getElementById("century").value = ""
-         document.getElementById("year").value = ""
          document.getElementById("month").value = ""
          document.getElementById("day").value = ""
+
          // breaks the ongoing while loop
          break;
 
