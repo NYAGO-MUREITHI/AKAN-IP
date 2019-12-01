@@ -7,7 +7,7 @@
 This project is a web application designed by me to help users get in touch with the Akan people of West Africa. I t is designed to collect information from a user which is their birthday in the form of a form and calculate the day of the week they were born and give output of their Akan traditional name based on the day. The web application makes use of JavaScript scripting language as well as HTML and css to bring out the best in the webpage.
 
 ## BDD
-# TITLE : Akan-name generator
+## TITLE : Akan-name generator
 As a person interested in West-African culture or a West-African native
 I want the generator to take my birthday details and on submission give me my native Akan name.
 So that I can be in touch with my West-African roots or interest in the Akan people.
@@ -15,7 +15,7 @@ So that I can be in touch with my West-African roots or interest in the Akan peo
 # Scenario1: Web application takes in details well and gives feedback
 Given that the user keys in the valid birth date in number 
 then the generator should give an alert giving them their Akan name
-# Scenaro2: The user enters an invalid date such as 36 or month such as 20
+# Scenario2: The user enters an invalid date such as 36 or month such as 20
 Given that the user keys in an invalid month number or date 
 Then the generator should give an alert telling them to input a valid month and/or date 
 
