@@ -56,7 +56,7 @@
          }
 
     //initializing a while loop for if valid date and month have been input
-         while(a>0 && a<12 && t>1 && t<31){
+         while(a>0 && a<=12 && t>=1 && t<=31){
 
 
         //s = document.getElementById("male").checked=true;
@@ -70,6 +70,7 @@
 
         // variable result gives the result of the calculations made
          var result=(( ( (y/4) -((2*y)-1)) + ((5*x)/4)  + (26*(a+1)/10) + t ) % 7);
+         
 
         // control flow for result obtaining day of week and gender input
          if (result<4.1 && gender==="male") {
